@@ -15,19 +15,17 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "ryshe/terraria:latest"
+          image: "ryshe/terraria:vanilla-latest"
           imagePullPolicy: Always
           args: 
             - -autocreate
             - "3"
-            - -config
-            - /data/config.json
             - -password
             - Dataforma1
             - -port
             - "7777"
             - -world
-            - /data/The Boys.wld
+            - /data/The_Boys.wld
             - -worldevil
             - corrupt
           ports:
